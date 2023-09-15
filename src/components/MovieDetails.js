@@ -59,16 +59,7 @@ const MovieDetails = () => {
     fetchVideoTrailer();
   }, [VideoApi]);
 
- {/* useEffect(() => {
-    if (moviesDetails?.title) {
-      movieTrailer(moviesDetails.title)
-        .then((res) => {
-          const urlParams = new URLSearchParams(new URL(res).search);
-          setVideoURL(urlParams.get("v"));
-        })
-        .catch((error) => console.error("Error fetching trailer URL:", error));
-    }
-  }, [moviesDetails]);*/}
+ 
 
   return (
     <Fragment>
