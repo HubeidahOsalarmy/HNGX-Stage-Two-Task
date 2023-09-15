@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import MovieList from "./components/MovieList";
-import MovieCard from "./components/MovieCard";
-import MovieSearch from "./components/MovieSearch";
-import LoadingIndicator from "./components/LoadingIndicator";
-import footSection from "./components/footSection";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Movie from "./components/Movie"
+import MovieDetails from "./components/MovieDetails";
 
 
 
 
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
-      <MovieList />
-      <MovieCard />
-      <MovieSearch />
-      <footSection />
-      
-    </div>
+    <div>
+    <Routes>
+    <Route path="" element={<Movie />} />
+    <Route path="/movies/:id" element={<MovieDetails />} />
+  </Routes>
+  </div>
   )
 }
 export default App;
