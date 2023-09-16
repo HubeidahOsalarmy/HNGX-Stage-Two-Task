@@ -36,7 +36,7 @@ const MovieDetails = () => {
           }
         });
         console.log(response.data)
-        setMoviesDetails(response.data);
+        setMoviesDetails(response.data.results.slice(0, 10));
       } catch (error) {
         console.error("Error fetching movie details:", error);
       }
